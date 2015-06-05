@@ -30,4 +30,4 @@
 
 
 
-![效果截图](http://7xjic7.com1.z0.glb.clouddn.com/CustomActionSheet.png)
+![效果截图](http://7xjic7.com1.z0.glb.clouddn.com/CustomActionSheet.png =375x667)
