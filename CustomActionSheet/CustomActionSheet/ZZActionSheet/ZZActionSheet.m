@@ -98,7 +98,6 @@
             button.titleLabel.font = BUTTON_TITLE_FONT;
             [button setTitle:title forState:UIControlStateNormal];
             [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//            [button setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
             [button setBackgroundImage:[self imageWithColor:[UIColor colorWithWhite:0.9 alpha:1.0]] forState:UIControlStateHighlighted];
             [button addTarget:self
                        action:@selector(didButtonClicked:)
@@ -113,7 +112,6 @@
         _cancelButton.titleLabel.font = BUTTON_TITLE_FONT;
         [_cancelButton setTitle:cancelButtonTitle forState:UIControlStateNormal];
         [_cancelButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//        [_cancelButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
         [_cancelButton setBackgroundImage:[self imageWithColor:[UIColor colorWithWhite:0.9 alpha:1.0]] forState:UIControlStateHighlighted];
 
         [_cancelButton addTarget:self
@@ -122,7 +120,6 @@
         [self addSubview:_cancelButton];
         
         // view frame
-        // screenWidth
         CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
         self.frame = CGRectMake(0, 0, screenWidth, [self getViewHeight]);
         

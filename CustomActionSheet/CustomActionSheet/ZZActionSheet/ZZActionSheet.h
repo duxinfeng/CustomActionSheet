@@ -23,9 +23,7 @@
             otherButtonTitles:(NSArray *)otherButtonTitles;
 
 - (void)showInView:(UIView *)view;
-//- (void)dismiss;
-//- (void)dismissWithAnimation:(BOOL)animation;
-//- (void)setHidden:(BOOL)hidden;
+
 
 @end
 
