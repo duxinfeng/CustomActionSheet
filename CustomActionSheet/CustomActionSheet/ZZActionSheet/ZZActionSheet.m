@@ -98,8 +98,8 @@
             button.titleLabel.font = BUTTON_TITLE_FONT;
             [button setTitle:title forState:UIControlStateNormal];
             [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-            [button setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-
+//            [button setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+            [button setBackgroundImage:[self imageWithColor:[UIColor colorWithWhite:0.9 alpha:1.0]] forState:UIControlStateHighlighted];
             [button addTarget:self
                        action:@selector(didButtonClicked:)
              forControlEvents:UIControlEventTouchUpInside];
@@ -113,8 +113,9 @@
         _cancelButton.titleLabel.font = BUTTON_TITLE_FONT;
         [_cancelButton setTitle:cancelButtonTitle forState:UIControlStateNormal];
         [_cancelButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_cancelButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-        
+//        [_cancelButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+        [_cancelButton setBackgroundImage:[self imageWithColor:[UIColor colorWithWhite:0.9 alpha:1.0]] forState:UIControlStateHighlighted];
+
         [_cancelButton addTarget:self
                           action:@selector(didCancelButtonClicked:)
                 forControlEvents:UIControlEventTouchUpInside];
@@ -305,5 +306,19 @@
     }
 }
 
+- (UIImage *)imageWithColor:(UIColor *)color
+{
+    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
 
 @end
